@@ -14,7 +14,7 @@ function Siderbar() {
   const { data: session, status } = useSession()
 
   return (
-    <div className="border-r border-gray-900 p-5 text-sm text-gray-500">
+    <div className="h-screen overflow-y-scroll border-r border-gray-900 p-5 text-sm text-gray-500 scrollbar-hide">
       <div className="space-y-4">
         <button
           onClick={() => signOut()}
