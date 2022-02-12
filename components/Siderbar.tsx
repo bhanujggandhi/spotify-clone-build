@@ -4,11 +4,10 @@ import {
   SearchIcon,
   LibraryIcon,
   PlusCircleIcon,
-  HeartIcon,
   RssIcon,
-  LogoutIcon,
 } from '@heroicons/react/outline'
-import { signOut, useSession } from 'next-auth/react'
+import { HeartIcon } from '@heroicons/react/solid'
+import { useSession } from 'next-auth/react'
 import useSpotify from '../hooks/useSpotify'
 import { useRecoilState } from 'recoil'
 import { playlistIdState } from '../atoms/playlistAtoms'
@@ -29,7 +28,7 @@ function Siderbar() {
   console.log(playlists)
 
   return (
-    <div className="lg:max-w-[15rem hidden h-screen overflow-y-scroll border-r border-gray-900 p-5 text-xs text-gray-500 scrollbar-hide sm:max-w-[12rem] md:inline-flex lg:text-sm ">
+    <div className="lg:max-w-[15rem hidden h-screen overflow-y-scroll border-r border-gray-900 p-5 pb-36 text-xs text-gray-500 scrollbar-hide sm:max-w-[12rem] md:inline-flex lg:text-sm">
       <div className="space-y-4">
         <button className="flex items-center space-x-2 hover:text-white">
           <HomeIcon className="h-5 w-5" />
@@ -50,12 +49,12 @@ function Siderbar() {
           <PlusCircleIcon className="h-5 w-5" />
           <p>Create Playlist</p>
         </button>
-        <button className="flex items-center space-x-2 hover:text-white">
-          <HeartIcon className="h-5 w-5" />
+        <button className=" flex items-center space-x-2  hover:text-white">
+          <HeartIcon className="h-5 w-5 text-blue-500" />
           <p>Liked Songs</p>
         </button>
         <button className="flex items-center space-x-2 hover:text-white">
-          <RssIcon className="h-5 w-5" />
+          <RssIcon className="h-5 w-5 text-green-500" />
           <p>Your Episodes</p>
         </button>
 
